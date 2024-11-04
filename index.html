@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Page</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  .sidebar ul {
+    list-style-type: none;
+  }
+  .sidebar ul li {
+    padding: 15px 0;
+  }
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar ul li a:hover {
+    color: #ff6b81;
+  }
+  .sidebar ul li a img {
+    margin-right: 10px;
+  }
+  /* Main Content */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6b81;
+    padding: 15px 20px;
+  }
+  .header .search-bar input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+  }
+  .header .icons {
+    display: flex;
+    align-items: center;
+  }
+  .header .icons div {
+    margin: 0 10px;
+    color: white;
+  }
+  .header .profile img {
+    width: 40px;
+    border-radius: 50%;
+  }
+  /* Hotel Info */
+  .hotel-info {
+    margin-top: 20px;
+  }
+  .hotel-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .hotel-info .rating {
+    color: red;
+  }
+  .hotel-info .location {
+    color: #666;
+  }
+  .hotel-info .score {
+    color: #ff6b81;
+    font-weight: bold;
+  }
+  /* Description */
+  .description {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .features ul {
+    list-style-type: none;
+  }
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  /* Reviews */
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .review {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  .review .rating {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"><img src="home_icon.png" alt="home icon">Hotel</a></li>
+      <li><a href="#"><img src="flight_icon.png" alt="flight icon">Flight</a></li>
+      <li><a href="#"><img src="car_icon.png" alt="car rental icon">Car Rental</a></li>
+      <li><a href="#"><img src="tour_icon.png" alt="tour icon">Tours</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Header -->
+    <div class="header">
+      <div class="search-bar">
+        <input type="text" placeholder="Search hotels">
+      </div>
+      <div class="icons">
+        <div>🔔 7</div>
+        <div>👍 13</div>
+        <div class="profile"><img src="profile_icon.png" alt="Profile"></div>
+      </div>
+    </div>
+
+    <!-- Hotel Info -->
+    <div class="hotel-info">
+      <h2>Hotel Las Palmas <span class="rating">★★★★★</span></h2>
+      <p class="location">Albufeira, Portugal</p>
+      <p class="score">8.6 | 429 Votes</p>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbmFgFol89YrYs5osW8OpwJNz6DxtZ2QqQDdZUwjQb_czkK_aOBwDWNGDuO1beX2ilZTE&usqp=CAU" alt="Hotel Image 1">
+      <img src="https://marmore-assets-v2.s3.eu-west-1.amazonaws.com/insights/migrated/GCC_Travel_Tourism_Marmore_800x400.jpg" alt="Hotel Image 2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbmFgFol89YrYs5osW8OpwJNz6DxtZ2QqQDdZUwjQb_czkK_aOBwDWNGDuO1beX2ilZTE&usqp=CAU" alt="Hotel Image 3">
+    </div>
+
+    <!-- Description -->
+    <div class="description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Animi nisi dignissimos debitis ratione sapiente saepe.</p>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <ul>
+        <li>Close to the beach</li>
+        <li>Free airport shuttle</li>
+        <li>Air conditioning and heating</li>
+        <li>We speak all languages</li>
+      </ul>
+      <ul>
+        <li>Breakfast included</li>
+        <li>Free wifi in all rooms</li>
+        <li>Pets allowed</li>
+        <li>Perfect for families</li>
+      </ul>
+    </div>
+
+    <!-- Reviews -->
+    <div class="reviews">
+      <div class="review">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+        <p>- Nick Smith, Feb 23rd, 2017</p>
+        <p class="rating">7.8</p>
+      </div>
+      <div class="review">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+        <p>- Jane Doe, Jan 15th, 2017</p>
+        <p class="rating">8.5</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
